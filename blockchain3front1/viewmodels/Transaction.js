@@ -3,10 +3,20 @@ var app = new Vue({
     data: {
       tx:[]
     },
+    computed:{
+      showtx(){
+        var now = Date.now();
+        this.tx.forEach(transaction => {
+          transaction.showtime = parseInt(now-transaction.time/1000/60);
+        });
+        return this.tx;
+      }
+    },
     mounted(){
       console.log('view mounted');
       this.getTx();
     },
+
     methods:{
       getTx(){
         axios.get('http://localhost:8080/transaction/getTranscation')

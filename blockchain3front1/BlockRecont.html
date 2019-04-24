@@ -12,9 +12,9 @@
 <body>
     <div id="app">
         <el-table :data="showgetblocks">
-            <el-table-column prop="height" label="高度">
+            <el-table-column label="高度">
                     <template slot-scope="scope">
-                            <a :href="'http://www.jingdong.com' +scope.row.height">{{scope.row.height}}
+                            <a :href="'BlockRecent.html?blockheight='+scope.row.height">{{scope.row.height}}
                             </a>
                         </template>
             </el-table-column>

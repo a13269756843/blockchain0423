@@ -12,12 +12,16 @@
 <body>
     <div id="app">
         <div id="app">
-                <el-button type="primary" @click="jimu">积木</el-button>
-                <el-button type="primary" @click="jiaoyi">交易</el-button>
-            <el-table :data="tx">
-                <el-table-column prop="txhash" label="交易哈希">
-                </el-table-column>
-                <el-table-column prop="time" label="时间">
+            <el-button type="primary" @click="jimu">积木</el-button>
+            <el-button type="primary" @click="jiaoyi">交易</el-button>
+            <el-table :data="showtx">
+                    <el-table-column prop="txhash" label="交易hash">
+                            <template slot-scope="scope">
+                                    <a :href="'jiaoyi.html' +scope.row.txhash">{{scope.row.txhash}}
+                                    </a>
+                                </template>
+                    </el-table-column>
+                <el-table-column prop="showtime" label="时间">
                 </el-table-column>
                 <el-table-column prop="amount" label="Amount">
                 </el-table-column>
