@@ -13,7 +13,7 @@ var app = new Vue({
       showgetblocks(){
         var now = Date.now();
         this.byHehigt.forEach(block => {
-          block.showtime = parseInt(now-block.time/1000/60);
+        
           block.showsizeOnDisk = block.sizeOnDisk.toLocaleString('en');
         });
         return this.byHehigt;
