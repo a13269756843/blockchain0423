@@ -3,6 +3,16 @@ var app = new Vue({
     data: {
       blocks:[]
     },
+    computed:{
+      showgetblocks(){
+        var now = Date.now();
+        this.blocks.forEach(block => {
+          block.showtime = parseInt(now-block.time/1000/60);
+          block.showsizeOnDisk = block.sizeOnDisk.toLocaleString('en');
+        });
+        return this.blocks;
+      }
+    },
     mounted(){
       console.log('view mounted');
       this.getBlock();

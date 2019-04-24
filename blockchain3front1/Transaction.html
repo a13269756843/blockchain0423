@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,27 @@
     <link rel="stylesheet" href="./assets/css/elementui.css">
     <title>Transaction</title>
 </head>
+
 <body>
     <div id="app">
-            <div id="app">
-                    <el-table :data="tx">
-                        <el-table-column  prop="txhash" label="交易哈希">
-                        </el-table-column>
-                        <el-table-column prop="time" label="时间">
-                        </el-table-column> 
-                        <el-table-column prop="amount" label="Amount">
-                        </el-table-column>
-                        <el-table-column prop="amount" label="总额">
-                        </el-table-column>
-                    </el-table>
-                </div>
-      </div>
-      <script src="./assets/js/axios.min.js"></script>
-      <script src="./assets/js/common.js"></script>
-      <script src="./assets/js/vue.js"></script>
-      <script src="./assets/js/elementui.js"></script>
-      <script src="./viewmodels/Transaction.js"></script>
+        <div id="app">
+            <el-table :data="tx">
+                <el-table-column prop="txhash" label="交易哈希">
+                </el-table-column>
+                <el-table-column prop="time" label="时间">
+                </el-table-column>
+                <el-table-column prop="amount" label="Amount">
+                </el-table-column>
+                <el-table-column prop="amount" label="总额">
+                </el-table-column>
+            </el-table>
+        </div>
+    </div>
+    <script src="./assets/js/axios.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/elementui.js"></script>
+    <script src="./viewmodels/Transaction.js"></script>
 </body>
+
 </html>
