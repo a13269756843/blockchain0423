@@ -20,6 +20,12 @@ var app = new Vue({
             // handle error
             console.log(error);
         });
+      },
+      jimu(){
+        location.href="blockchainindex.html";
+      },
+      jiaoyi(){
+        location.href="Transaction.html";
       }
     }
   })
