@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/elementui.css">
+    <title>Demo</title>
+</head>
+
+<body>
+    <div id="app">
+        <el-table :data="showTx">
+            <el-table-column prop="txid" label="交易序号">
+            </el-table-column>
+            <el-table-column prop="txhash" label="交易hash">
+            </el-table-column>
+            <el-table-column prop="size" label="交易量">
+            </el-table-column>
+            <el-table-column prop="weight" label="重量">
+            </el-table-column>
+            <el-table-column prop="time" label="时间">
+            </el-table-column>
+            <el-table-column prop="totalInput" label="交易进量">
+            </el-table-column>
+            <el-table-column prop="totalOutput" label="交易出量">
+            </el-table-column>
+            <el-table-column prop="fees" label="总和">
+            </el-table-column>
+            <el-table-column prop="txDetails" label="txDetails">
+            </el-table-column>
+        </el-table>
+    </div>
+    <script src="./assets/js/axios.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/elementui.js"></script>
+    <script src="./viewmodels/ByTxHash.js"></script>
+</body>
+
+</html>
