@@ -8,7 +8,9 @@ var app = new Vue({
       var url = new URL(location.href);
       var height = url.searchParams.get('blockheight');
       this.getBlock(height);
+
     },
+
     computed:{
       showgetblocks(){
         var now = Date.now();

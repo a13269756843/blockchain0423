@@ -17,7 +17,7 @@
             <el-table :data="showtx">
                     <el-table-column prop="txhash" label="交易hash">
                             <template slot-scope="scope">
-                                    <a :href="'jiaoyi.html' +scope.row.txhash">{{scope.row.txhash}}
+                                    <a :href="'ByTxHash.html?txhash=' +scope.row.txhash">{{scope.row.txhash}}
                                     </a>
                                 </template>
                     </el-table-column>
