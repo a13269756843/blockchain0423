@@ -11,26 +11,22 @@
 
 <body>
     <div id="app">
-        <el-table :data="showTx">
-            <el-table-column prop="txid" label="交易序号">
-            </el-table-column>
-            <el-table-column prop="txhash" label="交易hash">
-            </el-table-column>
-            <el-table-column prop="size" label="交易量">
-            </el-table-column>
-            <el-table-column prop="weight" label="重量">
-            </el-table-column>
-            <el-table-column prop="time" label="时间">
-            </el-table-column>
-            <el-table-column prop="totalInput" label="交易进量">
-            </el-table-column>
-            <el-table-column prop="totalOutput" label="交易出量">
-            </el-table-column>
-            <el-table-column prop="fees" label="总和">
-            </el-table-column>
-            <el-table-column prop="txDetails" label="txDetails">
-            </el-table-column>
-        </el-table>
+         
+                    <h1>Txhash #{{showTx[0].txhash}}</h1>  <br>
+        
+                    txid:	{{showTx[0].txid}} <br>
+                    txhash:	{{showTx[0].txhash}} <br>
+                    size：	{{showTx[0].size}} <br>
+                    weight：	{{showTx[0].weight}} <br>
+                    Size：	{{showTx[0].sizeOnDisk}} <br>
+                    time：	{{showTx[0].time}} <br>
+                    totalInput： 	{{showTx[0].totalInput}} <br>
+                    totalOutput：	{{showTx[0].totalOutput}}<br>
+                    fees： {{showTx[0].fees}} <br>
+                    txDetails： {{showTx[0].txDetails}} <br>
+          
+
+        
     </div>
     <script src="./assets/js/axios.min.js"></script>
     <script src="./assets/js/common.js"></script>
