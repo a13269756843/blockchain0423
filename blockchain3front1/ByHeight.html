@@ -10,33 +10,23 @@
 </head>
 
 <body>
-    <div id="app">
-        <el-table :data="showgetblocks">
-            <el-table-column prop="blockhash" label="块hash">
-            </el-table-column>
-            <el-table-column prop="time" label="时间">
-            </el-table-column>
-            <el-table-column prop="txSize" label="交易数量">
-            </el-table-column>
-            <el-table-column prop="showsizeOnDisk" label="大小">
-            </el-table-column>
-            <el-table-column prop="difficulty" label="难度">
-            </el-table-column>
-            <el-table-column prop="height" label="高度">
-            </el-table-column>
-            <el-table-column prop="prevBlockhash" label="上一个块hash">
-            </el-table-column>
-            <el-table-column prop="nextBlockhash" label="下一个块hash">
-            </el-table-column>
-            <el-table-column prop="outputTotal" label="交易出量">
-            </el-table-column>
-            <el-table-column prop="transactionFees" label="中间商赚差价">
-            </el-table-column>
-            <el-table-column prop="merkleRoot" label="全球用户">
-            </el-table-column>
-        </el-table>
+    
+            <div id="app">
+                    <h1>Block #{{showgetblocks[0].height}}</h1>  <br>
+        
+                    Number Of Transactions:	{{showgetblocks[0].txSize}} <br>
+                    Height:	{{showgetblocks[0].height}} <br>
+                    Timestamp：	{{showgetblocks[0].time}} <br>
+                    Difficulty：	{{showgetblocks[0].difficulty}} <br>
+                    Size：	{{showgetblocks[0].sizeOnDisk}} <br>
+                    Hash：	{{showgetblocks[0].blockhash}} <br>
+                    Previous Block：	{{showgetblocks[0].prevBlockhash}} <br>
+                    Next Block(s)：	{{showgetblocks[0].nextBlockhash}}<br>
+                    Merkle： {{showgetblocks[0].merkleRoot}} <br>
+            </div>
+       
      
-    </div>
+   
     <script src="./assets/js/axios.min.js"></script>
     <script src="./assets/js/common.js"></script>
     <script src="./assets/js/vue.js"></script>
